@@ -1,0 +1,31 @@
+#! /bin/sh
+
+#  
+#  ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗
+#  ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║
+#  ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║
+#  ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║
+#  ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║
+#  ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝
+#                                               
+#  https://github.com/baskerville/bspwm
+#
+
+bspc monitor -d 0 1 2 3 4 5 6 7 8 9 
+
+bspc config border_width          0
+bspc config window_gap            25
+bspc config top_padding           25
+bspc config split_ratio           0.52
+bspc config borderless_monocle    true
+bspc config gapless_monocle       false 
+bspc config focus_follows_pointer true
+
+bspc rule -a feh state=floating
+bspc rule -a sxiv state=pseudo_tiled
+bspc rule -a mpv state=pseudo_tiled
+
+sxhkd -c ~/.config/sxhkd/bspsxhkdrc &
+feh --bg-fill --no-fehbg --randomize ~/Images/Wallpapers &
+compton --config ~/.config/compton/bspcompton.conf &
+polybar bspwm

@@ -1,0 +1,8 @@
+.netrwhist
+config/ncmpcpp/error.log
+config/mpd/database
+config/mpd/log
+config/mpd/pid
+config/mpd/state
+config/mpd/playlists
+config/mpd/sticker.sql

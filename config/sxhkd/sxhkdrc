@@ -1,0 +1,45 @@
+
+#
+#  ███████╗██╗  ██╗██╗  ██╗██╗  ██╗██████╗ 
+#  ██╔════╝╚██╗██╔╝██║  ██║██║ ██╔╝██╔══██╗
+#  ███████╗ ╚███╔╝ ███████║█████╔╝ ██║  ██║
+#  ╚════██║ ██╔██╗ ██╔══██║██╔═██╗ ██║  ██║
+#  ███████║██╔╝ ██╗██║  ██║██║  ██╗██████╔╝
+#  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ 
+#
+#  https://github.com/baskerville/sxhkd
+#
+
+# Volume Control
+XF86AudioRaiseVolume
+    dash -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%"
+
+XF86AudioLowerVolume
+    dash -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%"
+
+XF86AudioMute
+           pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Terminal Emulator
+super + Return
+    alacritty	
+
+# Program Launcher
+super + space
+    rofi -show run	
+
+# Reload this sxhkd config file 
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Reload wallpaper
+super + alt + w
+    feh --bg-fill --no-fehbg --randomize ~/Images/Wallpapers
+
+# Capture Screenshot
+Print
+    maim -u ~/Images/Captures/$(date +%s).png && dunstify "Cheese!~" "Screenshot saved to ~/Images/Captures"
+
+# Capture Selection 
+super + Print
+    maim -su ~/Images/Captures/$(date +%s).png && dunstify "Cheese!~" "Selection saved to ~/Images/Captures"
