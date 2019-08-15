@@ -7,17 +7,19 @@ export LINKDOT=$PWD
 # App laucnher, screenshot tool, pdf viewer, music daemon and player,
 # Text editor, image viewer, notification daemon, and several others.
 sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
-    ttf-fantasque-sans-mono ttf-linux-libertine rofi mpv fzf maim \
+    ttf-fantasque-sans-mono ttf-linux-libertine rofi mpv maim exa \
     alacritty alacritty-terminfo compton mpd neofetch dash neovim \
     ncmpcpp feh xclip sxhkd bspwm i3-gaps dunst zathura-pdf-mupdf \
-    diff-so-fancy zsh-autosuggestions zsh-syntax-highlighting exa \
+    diff-so-fancy zsh-autosuggestions zsh-syntax-highlighting \
     xorg-server xorg-xinit xorg-xprop pulseaudio-alsa libnotify
 
 # Optionally install some more programs. Including a file manager,
 # find, cat, grep, and curl replacements. And a powerful image viewer.
 read -p "Would you like to install some extras? (Powerful command-line tools) [Y/n] " yn
 case $yn in
-    ''|[Yy]* ) sudo pacman -S nnn fd bat ripgrep httpie sxiv;;
+    ''|[Yy]* ) sudo pacman -S nnn fd bat ripgrep httpie sxiv fzf
+        patch home/.zshrc < other/add-fzf.patch
+        ;;
     * ) echo "Extras Skipped";;
 esac
 

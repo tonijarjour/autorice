@@ -1,0 +1,12 @@
+--- .zshrc	2019-08-15 16:41:40.136539694 -0400
++++ .azshrc	2019-08-15 16:41:30.716539364 -0400
+@@ -2,7 +2,9 @@
+ ZSH_CUSTOM=~/.config/zsh/
+ ZSH_THEME="mytheme"
+ DISABLE_AUTO_UPDATE="true"
++FZF_BASE="/usr/share/fzf"
+ plugins=(
++    fzf
+     git
+     z
+     cp
