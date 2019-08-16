@@ -25,7 +25,9 @@ bspc rule -a feh state=floating
 bspc rule -a sxiv state=pseudo_tiled
 bspc rule -a mpv state=pseudo_tiled
 
-sxhkd -c ~/.config/sxhkd/bspsxhkdrc &
-feh --bg-fill --no-fehbg --randomize ~/Images/Wallpapers &
+killall -w sxhkd polybar compton &
+sleep 0.1
 compton --config ~/.config/compton/bspcompton.conf &
+feh --bg-fill --no-fehbg --randomize ~/Images/Wallpapers &
+sxhkd -c ~/.config/sxhkd/bspsxhkdrc &
 polybar bspwm

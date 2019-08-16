@@ -4,7 +4,7 @@
 export LINKDOT=$PWD
 
 # Install fonts and programs. Including two WMs, a terminal emulator
-# App laucnher, screenshot tool, pdf viewer, music daemon and player,
+# App launcher, screenshot tool, pdf viewer, music daemon and player,
 # Text editor, image viewer, notification daemon, and several others.
 sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
     ttf-fantasque-sans-mono ttf-linux-libertine rofi mpv maim exa \
