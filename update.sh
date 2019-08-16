@@ -8,4 +8,4 @@ cd ../oh-my-zsh-git
 git pull
 makepkg -si
 
-sudo pacman -Syyu
+sudo pacman -Syu
