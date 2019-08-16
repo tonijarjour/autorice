@@ -198,7 +198,8 @@ for_window [class=".*"] border pixel 0
 gaps inner 25
 gaps top 25 
 
-exec_always --no-startup-id compton --config ~/.config/compton/i3compton.conf 
+# The first three will not be run on i3 restart. This is to avoid memory problems.
+exec --no-startup-id compton --config ~/.config/compton/i3compton.conf 
+exec --no-startup-id polybar i3 
+exec --no-startup-id sxhkd
 exec_always --no-startup-id feh --no-fehbg --randomize --bg-fill ~/Images/Wallpapers
-exec_always --no-startup-id polybar i3 
-exec_always --no-startup-id sxhkd
