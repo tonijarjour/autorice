@@ -1,5 +1,3 @@
-export EDITOR="/usr/bin/nvim"
-export VISUAL="/usr/bin/nvim"
 alias startx="startx ~/.xinitrc"
 alias vi=nvim
 alias vim=nvim
