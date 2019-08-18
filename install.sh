@@ -12,15 +12,9 @@ sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
     diff-so-fancy zsh-autosuggestions zsh-syntax-highlighting \
     xorg-server xorg-xinit xorg-xprop pulseaudio-alsa
 
-echo "-- You have two choices for music player. ncmpcpp + mpd, or cmus.
- -- ncmpcpp + mpd is more flexible, but also larger and with more dependencies.
- -- If you want to play music without having any windows open, you need them.
- -- cmus is much lighter but must remain open to keep playing music.
- -- You can install mpd + ncmpcpp at any time and they will work.
- -- This is because you have their config files no matter the choice you make."
-read -p "-- Would you like to use mpd + ncmpcpp instead of cmus? [Y/n] " yna
+read -p "-- Would you like to use mpd + ncmpcpp instead of cmus? [y/N] " yna
 case $yna in
-    ''|[Yy]* ) sudo pacman -S mpd ncmpcpp
+    [Yy]* ) sudo pacman -S mpd ncmpcpp
         patch home/.xinitrc < other/add-mpd.patch
         ;;
     * ) sudo pacman -S cmus;;
