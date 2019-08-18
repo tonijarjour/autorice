@@ -1,4 +1,5 @@
 alias startx="startx ~/.xinitrc"
+alias ncmpcpp="ncmpcpp -q"
 alias vi='nvim'
 alias vim='nvim'
 alias ls='exa -F'

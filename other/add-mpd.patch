@@ -1,0 +1,11 @@
+--- .xinitrc	2019-08-18 02:51:36.667021300 -0400
++++ .axinitrc	2019-08-18 10:50:48.642085000 -0400
+@@ -28,6 +28,8 @@
+  unset f
+ fi
+ 
++[ ! -s ~/.config/mpd/pid] && mpd &
++
+ [ $XDG_VTNR = 1 ] && exec bspwm
+ [ $XDG_VTNR = 2 ] && exec i3 
+ exec $1

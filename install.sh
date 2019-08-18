@@ -7,19 +7,33 @@ export LINKDOT=$PWD
 # App launcher, screenshot tool, pdf viewer, image viewer, and text editor.
 sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
     ttf-fantasque-sans-mono ttf-linux-libertine rofi mpv maim exa \
-    alacritty alacritty-terminfo compton neofetch dash neovim cmus \
-    feh xclip sxhkd bspwm i3-gaps dunst zathura-pdf-mupdf libnotify \
+    alacritty alacritty-terminfo compton neofetch dash neovim xclip \
+    feh sxhkd bspwm i3-gaps dunst zathura-pdf-mupdf libnotify \
     diff-so-fancy zsh-autosuggestions zsh-syntax-highlighting \
     xorg-server xorg-xinit xorg-xprop pulseaudio-alsa
 
+echo "-- You have two choices for music player. ncmpcpp + mpd, or cmus.
+ -- ncmpcpp + mpd is more flexible, but also larger and with more dependencies.
+ -- If you want to play music without having any windows open, you need them.
+ -- cmus is much lighter but must remain open to keep playing music.
+ -- You can install mpd + ncmpcpp at any time and they will work.
+ -- This is because you have their config files no matter the choice you make."
+read -p "-- Would you like to use mpd + ncmpcpp instead of cmus? [Y/n] " yna
+case $yna in
+    ''|[Yy]* ) sudo pacman -S mpd ncmpcpp
+        patch home/.xinitrc < other/add-mpd.patch
+        ;;
+    * ) sudo pacman -S cmus;;
+esac
+
 # Optionally install some more programs. Including a file manager,
 # find, cat, grep, and curl replacements. And a powerful image viewer.
-read -p "Would you like to install some extras? (Powerful command-line tools) [Y/n] " yn
-case $yn in
+read -p "-- Would you like to install some extras? (Powerful command-line tools) [Y/n] " ynb
+case $ynb in
     ''|[Yy]* ) sudo pacman -S nnn fd bat ripgrep httpie sxiv fzf
         patch home/.zshrc < other/add-fzf.patch
         ;;
-    * ) echo "Extras Skipped";;
+    * ) echo "-- Extras Skipped";;
 esac
 
 # Link dash to /bin/sh for performance boost.
@@ -37,7 +51,8 @@ sudo install -Dm 644 other/dashbinsh.hook /usr/share/libalpm/hooks/
 sudo install -Dm 644 other/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
 
 # Make some folders. Screenshots will go in the captures folder.
-mkdir -p ~/.config ~/.aurpkgs ~/Images/Captures ~/Images/Wallpapers
+mkdir -p ~/.config ~/.aurpkgs ~/Images/Captures ~/Images/Wallpapers \
+    $LINKDOT/config/mpd/playlists ~/Music
 
 # Move provided wallpapers to the wallpapers folder
 mv -n wallpapers/* ~/Images/Wallpapers
@@ -59,4 +74,4 @@ ln -sf $LINKDOT/home/.* .
 cd ~/.config
 ln -sf $LINKDOT/config/* .
 
-echo "Installation Complete! Restart the computer."
+echo "-- Installation Complete! Restart the computer."

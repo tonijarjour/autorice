@@ -1,0 +1,5 @@
+def_key "k"
+    scroll_up
+
+def_key "j"
+    scroll_down
