@@ -8,10 +8,10 @@ export LINKDOT=$PWD
 # Text editor, image viewer, notification daemon, and several others.
 sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
     ttf-fantasque-sans-mono ttf-linux-libertine rofi mpv maim exa \
-    alacritty alacritty-terminfo compton mpd neofetch dash neovim \
-    ncmpcpp feh xclip sxhkd bspwm i3-gaps dunst zathura-pdf-mupdf \
+    alacritty alacritty-terminfo compton neofetch dash neovim cmus \
+    feh xclip sxhkd bspwm i3-gaps dunst zathura-pdf-mupdf libnotify \
     diff-so-fancy zsh-autosuggestions zsh-syntax-highlighting \
-    xorg-server xorg-xinit xorg-xprop pulseaudio-alsa libnotify
+    xorg-server xorg-xinit xorg-xprop pulseaudio-alsa
 
 # Optionally install some more programs. Including a file manager,
 # find, cat, grep, and curl replacements. And a powerful image viewer.
@@ -38,9 +38,7 @@ sudo install -Dm 644 other/dashbinsh.hook /usr/share/libalpm/hooks/
 sudo install -Dm 644 other/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
 
 # Make several folders, including a Music and Images folder.
-mkdir -p $LINKDOT/config/mpd/playlists \
-    ~/.config ~/.aurpkgs ~/Music \
-    ~/Images/Captures ~/Images/Wallpapers
+mkdir -p ~/.config ~/.aurpkgs ~/Images/Captures ~/Images/Wallpapers
 
 # Move provided wallpapers to the wallpapers folder
 mv -n wallpapers/* ~/Images/Wallpapers

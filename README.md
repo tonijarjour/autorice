@@ -11,7 +11,7 @@ Need a serviceable Arch setup *fast*? Perhaps wishing for a solid base to custom
 This little script will install a collection of command line tools, two window managers, and a terminal emulator. Installation is easy:
 
 1. Install Arch Linux and a graphics driver for your system.
-2. `sudo pacman -S base-devel git`
+2. `sudo pacman -S base-devel git` Skip if you already have these.
 3. `git clone https://github.com/tonijarjour/autorice.git .dotfiles`
 4. `cd .dotfiles` (You **must** be inside the cloned directory)
 5. `sh install.sh`
