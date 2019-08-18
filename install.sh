@@ -4,8 +4,7 @@
 export LINKDOT=$PWD
 
 # Install fonts and programs. Including two WMs, a terminal emulator
-# App launcher, screenshot tool, pdf viewer, music daemon and player,
-# Text editor, image viewer, notification daemon, and several others.
+# App launcher, screenshot tool, pdf viewer, image viewer, and text editor.
 sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
     ttf-fantasque-sans-mono ttf-linux-libertine rofi mpv maim exa \
     alacritty alacritty-terminfo compton neofetch dash neovim cmus \
@@ -37,7 +36,7 @@ sudo install -Dm 644 other/local.conf /etc/fonts/
 sudo install -Dm 644 other/dashbinsh.hook /usr/share/libalpm/hooks/
 sudo install -Dm 644 other/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
 
-# Make several folders, including a Music and Images folder.
+# Make some folders. Screenshots will go in the captures folder.
 mkdir -p ~/.config ~/.aurpkgs ~/Images/Captures ~/Images/Wallpapers
 
 # Move provided wallpapers to the wallpapers folder
