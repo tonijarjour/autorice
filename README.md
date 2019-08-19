@@ -23,7 +23,7 @@ With this project, I set out to create something that would alleviate the incred
 
 Programs have been chosen carefully based on their performance and utility. At the same time, not too many are included. To keep it lean, command line tools make up the majority of what you will be getting. It's up to you to install the rest. 
 
-Default programs
+**Default programs**
 
 * **Window Manager**: i3-gaps
 * **Window Manager**: bspwm
@@ -41,7 +41,7 @@ Default programs
 * **Video Player**: mpv
 * **Music Player**: cmus
 
-Optional Programs
+**Optional Programs**
 
 * **Fuzzy Search**: fzf
 * **File Manager**: nnn
