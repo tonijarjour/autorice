@@ -18,7 +18,7 @@ XF86AudioLowerVolume
     dash -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%"
 
 XF86AudioMute
-           pactl set-sink-mute @DEFAULT_SINK@ toggle
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Terminal Emulator
 super + Return

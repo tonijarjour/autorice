@@ -6,11 +6,11 @@ export LINKDOT=$PWD
 # Install fonts and programs. Including two WMs, a terminal emulator
 # App launcher, screenshot tool, pdf viewer, image viewer, and text editor.
 sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
-    ttf-fantasque-sans-mono ttf-linux-libertine rofi mpv maim exa \
-    alacritty alacritty-terminfo compton neofetch dash neovim xclip \
+    ttf-fantasque-sans-mono ttf-linux-libertine rofi mpv maim \
+    alacritty alacritty-terminfo compton neofetch dash neovim \
     feh sxhkd bspwm i3-gaps dunst zathura-pdf-mupdf libnotify \
     diff-so-fancy zsh-autosuggestions zsh-syntax-highlighting \
-    xorg-server xorg-xinit xorg-xprop pulseaudio-alsa
+    xorg-server xorg-xinit xorg-xprop pulseaudio-alsa exa xclip
 
 read -p "-- For music, use mpd + ncmpcpp instead of cmus? [y/N] " yna
 case $yna in

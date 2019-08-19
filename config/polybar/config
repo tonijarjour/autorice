@@ -13,14 +13,14 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #0A0E14
-background-alt = #0A0E14
+background = #222
+background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #B3B1AD
+foreground = #dfdfdf
 foreground-alt = #555
 primary = #F9AF4F
 secondary = #91B362
-alert = #bd2c40
+alert = #EA6C73
 
 [bar/bspwm]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -153,7 +153,7 @@ label-focused-padding = 2
 label-occupied = %index%
 label-occupied-padding = 2
 
-label-urgent = %index%!
+label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
