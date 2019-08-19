@@ -25,33 +25,33 @@ Programs have been chosen carefully based on their performance and utility. At t
 
 Default programs
 
-* Window Manager: i3-gaps
-* Window Manager: bspwm
-* Terminal: Alacritty
-* Status Bar: Polybar
-* Shell: Oh My Zsh 
-* App Launcher: Rofi
-* System Info: Neofetch
-* Text Editor: Neovim
-* Hotkey Daemon: sxhkd
-* Notifications: dunst
-* PDF Reader: zathura
-* Screenshot Tool: maim
-* Image Viewer: feh
-* Video Player: mpv
-* Music Player: cmus
+* **Window Manager**: i3-gaps
+* **Window Manager**: bspwm
+* **Terminal**: Alacritty
+* **Status Bar**: Polybar
+* **Shell**: Oh My Zsh 
+* **App Launcher**: Rofi
+* **System Info**: Neofetch
+* **Text Editor**: Neovim
+* **Hotkey Daemon**: sxhkd
+* **Notifications**: dunst
+* **PDF Reader**: zathura
+* **Screenshot Tool**: maim
+* **Image Viewer**: feh
+* **Video Player**: mpv
+* **Music Player**: cmus
 
 Optional Programs
 
-* Fuzzy Search: fzf
-* File Manager: nnn
-* Image Viewer: sxiv
-* Music Daemon: mpd
-* Music Player: ncmpcpp
-* find: fd
-* grep: ripgrep
-* curl: httpie
-* cat: bat
+* **Fuzzy Search**: fzf
+* **File Manager**: nnn
+* **Image Viewer**: sxiv
+* **Music Daemon**: mpd
+* **Music Player**: ncmpcpp
+* **find**: fd
+* **grep**: ripgrep
+* **curl**: httpie
+* **cat**: bat
 
 ### Installation
 
