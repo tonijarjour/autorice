@@ -1,4 +1,21 @@
-![hi](screenshot.png)
+### A stylish setup that's ready for work in minutes.
+![hi](previews/desktop.png)
+
+### No borders for a light, pastoral mood.
+![hi](previews/minimal.png)
+
+### Polybar for your system info, and workspaces.
+![hi](previews/polybar.png)
+
+### Font display has been corrected. No ugly blocky UIs.
+![hi](previews/fonts.png)
+
+### Support for every language in the world.
+![hi](previews/languages.png)
+
+### On the simple but powerful Arch Linux.
+![hi](previews/arch.png)
+
 
 ### Introduction 
 
