@@ -19,20 +19,49 @@
 
 ### Introduction 
 
-Need a serviceable Arch setup *fast*? Perhaps wishing for a solid base to customize from? Seeking social proof and attention? Trying to impress your parents?
+With this project, I set out to create something that would alleviate the incredible time sink of setting up Arch Linux whilst getting every little thing just right. After nearly a month of work, this is what I have come up with. 
 
-**The AUTORICE 9001 has got you covered.**
+Programs have been chosen carefully based on their performance and utility. At the same time, not too many things have been included. To keep it lean, command line tools make up the majority of what you will be getting. It's up to you to install the rest. 
+
+Default programs
+
+* Window Manager: i3-gaps
+* Window Manager: bspwm
+* Terminal: Alacritty
+* Status Bar: Polybar
+* Shell: Oh My Zsh 
+* App Launcher: Rofi
+* System Info: Neofetch
+* Text Editor: Neovim
+* Hotkey Daemon: sxhkd
+* Notifications: dunst
+* PDF Reader: zathura
+* Screenshot Tool: maim
+* Image Viewer: feh
+* Video Player: mpv
+* Music Player: cmus
+
+Optional Programs
+
+* Fuzzy Search: fzf
+* File Manager: nnn
+* Image Viewer: sxiv
+* Music Daemon: mpd
+* Music Player: ncmpcpp
+* find: fd
+* grep: ripgrep
+* curl: httpie
+* cat : bat
 
 ### Installation
 
 This little script will install a collection of command line tools, two window managers, and a terminal emulator. Installation is easy:
 
-1. Install Arch Linux and a graphics driver for your system.
-2. `sudo pacman -S base-devel git` Skip if you already have these.
-3. `git clone https://github.com/tonijarjour/autorice.git .dotfiles`
-4. `cd .dotfiles` (You **must** be inside the cloned directory)
-5. `sh install.sh`
-6. Restart your computer after the script finishes.
+1. Install Arch Linux and make sure you have `base-devel` and `git` packages.
+2. `git clone https://github.com/tonijarjour/autorice.git .dotfiles`
+3. `cd .dotfiles` (You **must** be inside the cloned directory)
+4. `sh install.sh`
+5. Restart your computer after the script finishes.
 
 ### Usage
 
