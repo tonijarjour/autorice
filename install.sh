@@ -12,7 +12,7 @@ sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
     diff-so-fancy zsh-autosuggestions zsh-syntax-highlighting \
     xorg-server xorg-xinit xorg-xprop pulseaudio-alsa
 
-read -p "-- Would you like to use mpd + ncmpcpp instead of cmus? [y/N] " yna
+read -p "-- For music, use mpd + ncmpcpp instead of cmus? [y/N] " yna
 case $yna in
     [Yy]* ) sudo pacman -S mpd ncmpcpp
         patch home/.xinitrc < other/add-mpd.patch
@@ -22,7 +22,7 @@ esac
 
 # Optionally install some more programs. Including a file manager,
 # find, cat, grep, and curl replacements. And a powerful image viewer.
-read -p "-- Would you like to install some extras? (Powerful command-line tools) [Y/n] " ynb
+read -p "-- Install extras? (nnn fd bat ripgrep httpie sxiv fzf) [Y/n] " ynb
 case $ynb in
     ''|[Yy]* ) sudo pacman -S nnn fd bat ripgrep httpie sxiv fzf
         patch home/.zshrc < other/add-fzf.patch
