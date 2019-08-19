@@ -19,9 +19,9 @@
 
 ### Introduction 
 
-With this project, I set out to create something that would alleviate the incredible time sink of setting up Arch Linux whilst getting every little thing just right. After nearly a month of work, this is what I have come up with. 
+With this project, I set out to create something that would alleviate the incredible time sink of setting up Arch Linux. After nearly a month of work, this is what I have come up with. 
 
-Programs have been chosen carefully based on their performance and utility. At the same time, not too many things have been included. To keep it lean, command line tools make up the majority of what you will be getting. It's up to you to install the rest. 
+Programs have been chosen carefully based on their performance and utility. At the same time, not too many are included. To keep it lean, command line tools make up the majority of what you will be getting. It's up to you to install the rest. 
 
 Default programs
 
@@ -51,7 +51,7 @@ Optional Programs
 * find: fd
 * grep: ripgrep
 * curl: httpie
-* cat : bat
+* cat: bat
 
 ### Installation
 
