@@ -77,6 +77,8 @@ With that said. There are some important aspects that should give some comfort:
 
 With those three points laid out, here are some basic keybindings to help you out:
 
+**Global**
+
 * `mod return` to start a Terminal.
 * `mod space` to use the app launcher.
 * `mod h,j,k,l` to move between windows.
@@ -90,6 +92,8 @@ With those three points laid out, here are some basic keybindings to help you ou
 * `mod right click` to resize windows.
 * `mod escape` to reload the hotkey config.
 
+**bspwm**
+
 * `mod arrow keys` to move a floating window in bspwm.
 * `mod alt r` to restart bspwm.
 * `mod alt q` to quit out of bspwm.
@@ -97,6 +101,8 @@ With those three points laid out, here are some basic keybindings to help you ou
 * `mod c` to cycle through windows in bspwm.
 * `mod alt h,j,k,l` to make a window larger in bspwm.
 * `mod shift alt h,j,k,l` to make a window smaller in bspwm.
+
+**i3**
 
 * `mod shift r` to restart i3.
 * `mod shift c` to reload i3 config.
