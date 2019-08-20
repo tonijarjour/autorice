@@ -110,7 +110,7 @@ With those three points laid out, here are some basic keybindings to help you ou
 * `mod semicolon,v` to split a window horizontally, vertically in i3.
 * `mod f` to toggle fullscreen in i3.
 * `mod shift space` to toggle a window to float or tile in i3.
-* `mod c` to focus between floating and tiled in i3.
+* `mod c` to toggle focus between floating and tiled windows in i3.
 * `mod r` to enter resize mode in i3.
 * `mod h,j,k,l` to shrink and grow a window (while in resize mode) in i3.
 
