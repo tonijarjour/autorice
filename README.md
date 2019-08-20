@@ -40,6 +40,7 @@ Programs have been chosen carefully based on their performance and utility. At t
 * **Image Viewer**: feh
 * **Video Player**: mpv
 * **Music Player**: cmus
+* **ls**: exa 
 
 **Optional Programs**
 
