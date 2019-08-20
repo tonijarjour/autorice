@@ -10,7 +10,4 @@
 !  https://github.com/davatorium/rofi
 !  
 
-rofi.width:                            25
-rofi.lines:                            12
-rofi.font:                             Noto Sans 12
 rofi.theme: ~/.config/rofi/onedark.rasi 
