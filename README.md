@@ -95,6 +95,7 @@ With those three points laid out, here are some basic keybindings to help you ou
 **bspwm**
 
 * `mod arrow keys` to move a floating window in bspwm.
+* `mod w` to close a window in bspwm.
 * `mod alt r` to restart bspwm.
 * `mod alt q` to quit out of bspwm.
 * `mod s,t,f,m` to make a window stack (float), tile, fullscreen, monocole in bspwm.
@@ -107,6 +108,7 @@ With those three points laid out, here are some basic keybindings to help you ou
 * `mod shift r` to restart i3.
 * `mod shift c` to reload i3 config.
 * `mod shift e` to quit out of i3.
+* `mod shift q` to close a window in i3.
 * `mod semicolon,v` to split a window horizontally, vertically in i3.
 * `mod f` to toggle fullscreen in i3.
 * `mod shift space` to toggle a window to float or tile in i3.
