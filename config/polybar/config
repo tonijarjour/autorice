@@ -13,7 +13,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #0A0E14
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -31,7 +31,7 @@ height = 25
 ;radius = 6.0
 fixed-center = false
 
-background = ${colors.background}
+background = #cc0A0E14
 foreground = ${colors.foreground}
 
 line-size = 3
@@ -76,7 +76,7 @@ height = 25
 ;radius = 6.0
 fixed-center = false
 
-background = ${colors.background}
+background = #cc0A0E14
 foreground = ${colors.foreground}
 
 line-size = 3
@@ -146,7 +146,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
+label-focused-background = #cc0A0E14
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
@@ -154,7 +154,7 @@ label-occupied = %index%
 label-occupied-padding = 2
 
 label-urgent = %index%
-label-urgent-background = ${colors.alert}
+label-urgent-background = #cc0A0E14
 label-urgent-padding = 2
 
 label-empty = %index%
@@ -179,7 +179,7 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
+label-focused-background = #cc0A0E14
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
@@ -195,7 +195,7 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${colors.alert}
+label-urgent-background = #cc0A0E14
 label-urgent-padding = 2
 
 ; Separator in between workspaces
