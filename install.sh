@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Export the path to this directory for later use in the script
 export LINKDOT=$PWD
