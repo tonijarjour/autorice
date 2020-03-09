@@ -2,7 +2,7 @@
 
 ![hi](preview.png)
 
-This is an extremely simple autorice program. Heres a list of the stuff you get:
+This is an extremely simple autorice program. Here's a list of the programs you get:
 
 * Emoji: Joypixels
 * MS Metric fonts: Croscore Fonts
@@ -32,7 +32,7 @@ This is an extremely simple autorice program. Heres a list of the stuff you get:
 
 ### Usage
 
-Here is a list of hotkeys (most of it is bspwm defaults).
+List of hotkeys (most are bspwm defaults):
 
 **Global**
 
