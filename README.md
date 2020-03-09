@@ -2,7 +2,7 @@
 
 ![hi](preview.png)
 
-This is an extremely simple autorice program. Here's a list of the programs you get:
+This is an extremely simple autoricer. Here's a list of the programs you get:
 
 * Emoji: Joypixels
 * MS Metric fonts: Croscore Fonts
