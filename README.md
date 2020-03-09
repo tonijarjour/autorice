@@ -21,7 +21,6 @@ This is an extremely simple autorice program. Here's a list of the programs you 
 * Clipboard: xclip
 * Screenshot: maim
 * System Info: neofetch
-* ls replacement: exa
 
 ### Installation
 
