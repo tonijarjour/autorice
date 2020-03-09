@@ -8,7 +8,7 @@ sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
     pulseaudio-alsa xclip neovim neofetch diff-so-fancy zathura-pdf-mupdf
 
 # Uncomment if you want some cool command line tools.
-# sudo pacman -S httpie nnn  bat ripgrep fd
+# sudo pacman -S httpie nnn bat ripgrep fd
 
 # Uncomment if you want to improve font display.
 # sudo ln -sf /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
