@@ -19,7 +19,7 @@ alias gcam='git commit -am'
 alias gp='git push'
 alias copy='xclip -se c'
 alias imgc='xclip -se c -t image/png -i'
-# alias neofetch='printf "\n\n" && neofetch && echo'
+#alias neofetch='printf "\n\n" && neofetch && echo'
 PS1='\[\e[36m\]\u\[\e[37m\]@\[\e[36m\]\h \[\e[33m\]\W \[\e[90m\]λ \[\e[39m\]'
 
 bind 'set completion-ignore-case on'

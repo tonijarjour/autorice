@@ -33,8 +33,6 @@ This is an extremely simple autoricer. Here's a list of the programs you get:
 
 List of hotkeys (most are bspwm defaults):
 
-**Global**
-
 * `mod return` to start a Terminal.
 * `mod space` to use the app launcher.
 * `mod h,j,k,l` to move between windows.
