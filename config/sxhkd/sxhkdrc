@@ -14,7 +14,7 @@ super + Return
 
 # Program Launcher
 super + space
-    rofi -m -1 -show run	
+    rofi -location 7 -xoffset 25 -yoffset -25 -m -1 -show run	
 
 # Reload this sxhkd config file 
 super + Escape
