@@ -23,5 +23,7 @@ PS1='\[\e[36m\]\u\[\e[37m\]@\[\e[36m\]\h \[\e[33m\]\W \[\e[90m\]λ \[\e[39m\]'
 
 bind 'set completion-ignore-case on'
 
+neofetch
+
 [[ -f /usr/share/fzf/key-bindings.bash ]] && . /usr/share/fzf/key-bindings.bash
 [[ -f /usr/share/fzf/completion.bash ]] && . /usr/share/fzf/completion.bash
