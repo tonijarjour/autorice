@@ -16,11 +16,6 @@ sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
 # sudo ln -sf /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
 sudo ln -sf /etc/fonts/conf.avail/75-joypixels.conf /etc/fonts/conf.d/
 
-xdg-mime default feh.desktop image/png
-xdg-mime default feh.desktop image/jpeg
-xdg-mime default sxiv.desktop image/gif
-xdg-mime default org.pwmt.zathura-pdf-mupdf.desktop application/pdf
-
 mkdir -p ~/.config ~/Images/Captures
 
 cd ~
