@@ -21,6 +21,7 @@ This is an extremely simple autoricer. Here's a list of the programs you get:
 * Clipboard: xclip
 * Screenshot: maim
 * System Info: neofetch
+* Compositor: picom
 
 ### Installation
 
