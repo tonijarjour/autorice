@@ -28,7 +28,7 @@ This is an extremely simple autoricer. Here's a list of the programs you get:
 
 1. Install Arch Linux and a graphics driver.
 2. `git clone https://github.com/tonijarjour/autorice.git ~/.dotfiles`
-3. Edit `install.sh` and `config/bspwm/bspwmrc` to your specification.
+3. Edit `config/bspwm/bspwmrc` and `config/sxhkd/sxhkdrc` to your satisfaction.
 4. Check on everything else and change it if you want.
 5. `cd ~/.dotfiles` then `bash install.sh` 
 6. Reboot when finished.

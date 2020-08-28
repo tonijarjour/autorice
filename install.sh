@@ -6,10 +6,7 @@ sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
     ttf-fantasque-sans-mono rofi maim alacritty exa feh xclip sxhkd \
     bspwm dunst libnotify xorg-server xorg-xinit xorg-xprop fzf mpv \
     pulseaudio-alsa neovim neofetch diff-so-fancy zathura-pdf-mupdf \
-    picom sxiv nnn
-
-# Improved versions of curl, cat, grep, find
-#sudo pacman -S httpie bat ripgrep fd
+    picom sxiv nnn httpie bat ripgrep fd
 
 # Font rendering improvements. Last one enables emoji to display.
 sudo ln -sf /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
