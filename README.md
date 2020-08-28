@@ -12,10 +12,11 @@ This is an extremely simple autoricer. Here's a list of the programs you get:
 * Terminal Emulator: Alacritty
 * Text Editor: Neovim
 * PDF Reader: Zathura
-* Video player: mpv
-* Image Viewer: feh
-* Window manager: bspwm
-* Hotkey manager: sxhkd
+* Video Player: mpv
+* Image Viewer: feh, sxiv
+* File Manager: nnn
+* Window Manager: bspwm
+* Hotkey Manager: sxhkd
 * Notifications: dunst
 * Search: fzf
 * Clipboard: xclip
