@@ -5,17 +5,19 @@ LINKDOT=$PWD
 sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
     ttf-fantasque-sans-mono rofi maim alacritty exa feh xclip sxhkd \
     bspwm dunst libnotify xorg-server xorg-xinit xorg-xprop fzf mpv \
-    pulseaudio-alsa neovim neofetch diff-so-fancy zathura-pdf-mupdf
+    pulseaudio-alsa neovim neofetch diff-so-fancy zathura-pdf-mupdf \
+    picom sxiv nnn
 
-# Uncomment if you want some cool command line tools.
-# sudo pacman -S httpie nnn bat ripgrep fd sxiv
+# Improved versions of curl, cat, grep, find
+#sudo pacman -S httpie bat ripgrep fd
 
-# Uncomment if you want to improve font display.
-# sudo ln -sf /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
-# sudo ln -sf /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/
-# sudo ln -sf /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
+# Font rendering improvements. Last one enables emoji to display.
+sudo ln -sf /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
+sudo ln -sf /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/
+sudo ln -sf /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
 sudo ln -sf /etc/fonts/conf.avail/75-joypixels.conf /etc/fonts/conf.d/
 
+# Screenshots will go in the Captures folder. You can change this in config/sxhkd/sxhkdrc
 mkdir -p ~/.config ~/Images/Captures
 
 cd ~
