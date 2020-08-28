@@ -33,6 +33,13 @@ This is an extremely simple autoricer. Here's a list of the programs you get:
 5. `cd ~/.dotfiles` then `bash install.sh` 
 6. Reboot when finished.
 
+### Default Applications
+I recommend running the following commands after you have booted into the desktop.
+* `xdg-mime default org.pwmt.zathura-pdf-mupdf.desktop application/pdf`
+* `xdg-mime default feh.desktop image/jpeg`
+* `xdg-mime default feh.desktop image/png`
+* `xdg-mime default sxiv.desktop image/gif`
+
 ### Usage
 
 You can view and change keybinds in the [sxhkd config file](config/sxhkd/sxhkdrc).
