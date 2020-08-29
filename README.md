@@ -38,7 +38,7 @@ I recommend running the following commands after you have booted into the deskto
 * `xdg-mime default org.pwmt.zathura-pdf-mupdf.desktop application/pdf`
 * `xdg-mime default feh.desktop image/jpeg`
 * `xdg-mime default feh.desktop image/png`
-* `xdg-mime default sxiv.desktop image/gif`
+* `xdg-mime default feh.desktop image/gif`
 
 ### Usage
 
