@@ -8,6 +8,8 @@ sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
     pulseaudio-alsa neovim neofetch diff-so-fancy zathura-pdf-mupdf \
     picom sxiv nnn httpie bat ripgrep fd
 
+curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
+
 # Font rendering improvements. Last one enables emoji to display.
 sudo ln -sf /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
 sudo ln -sf /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/
