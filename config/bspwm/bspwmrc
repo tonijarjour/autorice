@@ -14,11 +14,11 @@ bspc config borderless_monocle    true
 bspc config gapless_monocle       false 
 bspc config focus_follows_pointer true
 
-bspc rule -a feh state=floating
+bspc rule -a feh state=pseudo_tiled
+bspc rule -a sxiv state=pseudo_tiled
+bspc rule -a mpv state=pseudo_tiled
 bspc rule -a krita state=floating
 bspc rule -a blender state=floating
 bspc rule -a obs state=floating
-bspc rule -a sxiv state=pseudo_tiled
-bspc rule -a mpv state=pseudo_tiled
 
 feh --bg-fill --no-fehbg --randomize ~/Images/Wallpapers
