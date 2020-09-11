@@ -17,9 +17,9 @@ passwd username
 
 git clone https://github.com/tonijarjour/autorice.git ~/.dotfiles
 ```
-4. Read everything in `home` and `install.sh` to understand what you are getting.
-5. If you've never used bspwm, also read `config/sxhkd/sxhkdrc` and `config/bspwm/bspwmrc`.
-6. Run `bash install.sh`, then reboot once the script finishes.
+4. Run `bash install.sh`, then reboot once the script finishes.
+5. Read everything in `home` and `install.sh` to understand what you are getting.
+6. If you've never used bspwm, also read `config/sxhkd/sxhkdrc` and `config/bspwm/bspwmrc`.
 
 ### Neovim
 1. Start `nvim` and run `:PlugInstall` to enable the plugins.
