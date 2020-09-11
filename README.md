@@ -26,7 +26,7 @@ git clone https://github.com/tonijarjour/autorice.git ~/.dotfiles
 2. Read `config/nvim/init.vim` to learn about the customizations and keybinds.
 ![neovim](1599808230.png)
 ### Aliases
-Aliases are in the `home/.aliases` file. Take a look and decide if you like what you see.
+Aliases are in `home/.aliases`. Take a look and decide if you like what you see.
 
 ### fzf
 `fzf` has been heavily integrated into the shell and `nvim`. It has been setup to use `fd` results instead of `find`. Use `Ctrl-t` to search for files, `Ctrl-r` to search through command history, and `Alt-c` to search for a directory to cd into.
