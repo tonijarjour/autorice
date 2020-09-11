@@ -1,0 +1,38 @@
+map u scroll half-up
+map d scroll half-down
+map p scroll full-up
+map n scroll full-down
+map K zoom in
+map J zoom out
+map D toggle_page_mode
+map r reload
+map R rotate
+map i recolor
+
+set font "Noto Sans 10"
+set statusbar-h-padding 8
+set statusbar-v-padding 8
+set render-loading false
+set recolor-keephue "true"
+set recolor-reverse-video "true"
+set selection-clipboard clipboard
+
+set default-bg "#000000"
+set default-fg "#F7F7F6" 
+set statusbar-fg "#B0B0B0" 
+set statusbar-bg "#202020"
+set inputbar-bg "#151515"
+set inputbar-fg "#FFFFFF"
+set highlight-color "#F4BF75" 
+set highlight-active-color "#6A9FB5" 
+set notification-bg "#90A959"
+set notification-fg "#151515"
+set notification-error-bg "#AC4142"
+set notification-error-fg "#151515" 
+set notification-warning-bg "#AC4142"
+set notification-warning-fg "#151515"
+set completion-highlight-fg "#151515"
+set completion-highlight-bg "#90A959"
+set completion-bg "#303030" 
+set completion-fg "#E0E0E0"
+

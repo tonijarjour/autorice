@@ -1,4 +1,5 @@
 feh 	--scale-down \
 	--borderless \
 	--no-menus \
-    --geometry 960x540 
+	--image-bg #B0B0B0 \
+    --geometry 960x540

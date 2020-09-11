@@ -1,16 +1,26 @@
 # Volume Control
 XF86AudioRaiseVolume
-    bash -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%"
+    amixer set Master unmute && amixer set Master 5%+
 
 XF86AudioLowerVolume
-    bash -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    amixer set Master unmute && amixer set Master 5%-
 
 XF86AudioMute
-    pactl set-sink-mute @DEFAULT_SINK@ toggle
+    amixer set Master toggle 
 
 # Terminal Emulator
 super + Return
     alacritty
+
+# Programs
+super + n
+    alacritty -e nnn -e
+super + v
+    alacritty -e cmus
+super + r
+    chromium
+super + z
+    zathura
 
 # Program Launcher
 super + space
@@ -20,25 +30,25 @@ super + space
 super + Escape
     pkill -USR1 -x sxhkd
 
-# Reload wallpaper
-super + alt + w
-    feh --bg-fill --no-fehbg --randomize ~/Images/Wallpapers
+# Set a random wallpaper
+#super + alt + w
+#    feh --bg-fill --no-fehbg --randomize ~/path/to/wallpapers
 
-# Save Screenshot
+# Screenshot saved
 Print
-    maim -u ~/Images/Captures/$(date +%s).png && dunstify "Cheese!~" "Screenshot saved to ~/Images/Captures"
+    maim -u ~/$(date +%s).png && dunstify "Screenshot Saved"
 
-# Save Selection 
+# Selection saved
 super + Print
-    maim -su ~/Images/Captures/$(date +%s).png && dunstify "Cheese!~" "Selection saved to ~/Images/Captures"
+    maim -su ~/$(date +%s).png && dunstify "Selection Saved"
 
 # Screenshot to clipboard
 shift + Print
-    maim -u | xclip -se c -t image/png && dunstify "Cheese!~" "Screenshot copied to Clipboard"
+    maim -u | xclip -se c -t image/png && dunstify "Screenshot Copied"
 
 # Selection  to clipboard
 super + shift + Print
-    maim -su | xclip -se c -t image/png && dunstify "Cheese!~" "Selection copied to Clipboard"
+    maim -su | xclip -se c -t image/png && dunstify "Selection Copied"
 
 #
 # bspwm hotkeys

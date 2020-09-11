@@ -1,26 +1,36 @@
-#!/bin/bash
+#!/bin/sh
 
-LINKDOT=$PWD
+PACMAN='sudo pacman -S'
+LINKHERE="$PWD"
 
-sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
-    ttf-fantasque-sans-mono rofi maim alacritty exa feh xclip sxhkd \
-    bspwm dunst libnotify xorg-server xorg-xinit xorg-xprop fzf mpv \
-    pulseaudio-alsa neovim neofetch diff-so-fancy zathura-pdf-mupdf \
-    picom sxiv nnn httpie bat ripgrep fd
+# Script needs to be run from the directory that contains it to properly link the files.
+if ! [ -f "$PWD"/install.sh ]; then
+    echo 'Must run in the directory of this script!'
+    exit
+fi
 
-# Font rendering improvements. Last one enables emoji to display.
-sudo ln -sf /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
-sudo ln -sf /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/
-sudo ln -sf /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
-sudo ln -sf /etc/fonts/conf.avail/75-joypixels.conf /etc/fonts/conf.d/
+$PACMAN alacritty alsa-utils bat bspwm capitaine-cursors cmus diff-so-fancy \
+        dunst exa fd feh fzf httpie libnotify maim man-db mpv neofetch neovim \
+        nnn noto-fonts noto-fonts-cjk noto-fonts-emoji picom ripgrep rofi sxhkd \
+        sxiv xclip xorg-server xorg-xinit xorg-xprop xorg-xrandr xorg-xsetroot \
+        zathura-cb zathura-pdf-mupdf 
+    
+# Make the needed directories for this script to succeed.
+mkdir -p "$HOME"/.config/nnn/plugins "$HOME"/.local/share "$HOME"/.icons/default
 
-# Screenshots will go in the Captures folder. You can change this in config/sxhkd/sxhkdrc
-mkdir -p ~/.config ~/Images/Captures
+# Put the dotfiles where they belong
+ln -sf "$LINKHERE"/home/.* "$HOME"
+ln -sf "$LINKHERE"/config/* "$HOME"/.config/
 
-cd ~
-ln -sf $LINKDOT/home/.* .
+# Default application settings (xdg-open pdfs and images)
+ln -s "$LINKHERE"/local/share/applications "$HOME"/.local/share
 
-cd ~/.config
-ln -sf $LINKDOT/config/* .
+# Set the defeault mouse cursor
+cp other/index.theme "$HOME"/.icons/default
 
-echo "-- Autorice finished!"
+# Install nnn plugins
+curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
+
+# Install vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

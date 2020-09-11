@@ -1,0 +1,43 @@
+#!/bin/sh
+# ~/.aliases
+
+# Easier access to nvim
+alias vi='nvim'
+
+# nnn will open text files in the the text editor
+alias n='n -e'
+alias nnn='nnn -e'
+
+# ls 
+alias ls='exa -F'
+
+# hidden ls
+alias lsa='exa -Fa'
+
+# long
+alias l='exa -Fhl --git'
+
+# hidden long
+alias la='exa -Fhla --git'
+
+# This also accepts flags -a for hidden, and -l for long output
+alias tree='exa -TFh --git -I .git'
+
+# gs shadows ghostscript
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit'
+alias gd='git diff'
+alias gh='git stash'
+alias gi='git init'
+alias gk='git checkout'
+alias gl='git pull --recurse-submodules'
+alias gm='git merge'
+alias gn='git clone --recursive'
+alias go='git log --oneline -n 20 --graph'
+alias gp='git push'
+alias gr='git reset'
+alias gs='git status -s'
+alias gt='git remote'
+alias gv='git revert'
+alias gw='git show'
