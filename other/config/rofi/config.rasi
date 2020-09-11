@@ -1,0 +1,4 @@
+configuration {
+	font: "Noto Sans 12";
+	theme: "/usr/share/rofi/themes/Arc-Dark.rasi";
+}

@@ -1,0 +1,40 @@
+# ~/.inputrc
+
+set editing-mode vi 
+set show-mode-in-prompt on
+set vi-ins-mode-string \1\e[6 q\2
+set vi-cmd-mode-string \1\e[2 q\2
+
+set echo-control-characters off
+set show-all-if-ambiguous on
+set completion-ignore-case on
+set completion-map-case on
+set match-hidden-files off
+set page-completions off
+set colored-stats On
+set visible-stats On
+set mark-symlinked-directories On
+set colored-completion-prefix On
+set menu-complete-display-prefix On
+
+# emacs mode keybindings
+$if mode=emacs
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+TAB: menu-complete
+"\e[Z": menu-complete-backward
+$endif
+
+# vi mode keybindings
+$if mode=vi
+set keymap vi-command
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+j: history-search-forward
+k: history-search-backward
+set keymap vi-insert
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+TAB: menu-complete
+"\e[Z": menu-complete-backward
+$endif
