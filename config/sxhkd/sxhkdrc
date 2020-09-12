@@ -17,8 +17,6 @@ super + n
     alacritty -e nnn -e
 super + v
     alacritty -e cmus
-super + r
-    chromium
 super + z
     zathura
 
@@ -49,6 +47,14 @@ shift + Print
 # Selection  to clipboard
 super + shift + Print
     maim -su | xclip -se c -t image/png && dunstify "Selection Copied"
+
+# Example of simple brightness controls. Use your monitor's name. 
+# For the names, run: bspc query -M --names
+#super + u
+#    xrandr --output DVI-I-1 --brightness 0.7
+#
+#super + i
+#    xrandr --output DVI-I-1 --brightness 1.0
 
 #
 # bspwm hotkeys
