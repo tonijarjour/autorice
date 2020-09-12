@@ -17,10 +17,10 @@ set recolor-keephue "true"
 set recolor-reverse-video "true"
 set selection-clipboard clipboard
 
-set default-bg "#000000"
+set default-bg "#1d1f21"
 set default-fg "#F7F7F6" 
 set statusbar-fg "#B0B0B0" 
-set statusbar-bg "#202020"
+set statusbar-bg "#1d1f21"
 set inputbar-bg "#151515"
 set inputbar-fg "#FFFFFF"
 set highlight-color "#F4BF75" 

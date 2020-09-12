@@ -5,5 +5,5 @@ Xcursor.size: 32
 *font: xft:Noto Sans:size=10
 
 ! Better colors for sxiv
-*foreground: #202020
+*foreground: #1d1f21
 *background: #B0B0B0
