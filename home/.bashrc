@@ -35,7 +35,7 @@ shopt -s autocd
 [[ -f "$HOME"/.variables ]] && . "$HOME"/.variables
 
 # This contains convenience aliases for git, and exa (which shadows ls).
-# The -e flag is added to the n command to make nnn open text in an editor.
+# The -e flag is added to the nnn command to make nnn open text in an editor.
 # You should take a look at this file.
 [[ -f "$HOME"/.aliases ]] && . "$HOME"/.aliases
 

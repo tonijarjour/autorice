@@ -1,4 +1,4 @@
-! Larger cursor (otherwise it is tiny)
+! Larger cursor (otherwise it is very small)
 Xcursor.size: 32
 
 ! More readable font for sxiv

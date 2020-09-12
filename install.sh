@@ -3,7 +3,7 @@
 PACMAN='sudo pacman -S'
 LINKHERE="$PWD"
 
-# Script needs to be run from the directory that contains it to properly link the files.
+# This needs to be run from the directory that contains it to properly link the files.
 if ! [ -f "$PWD"/install.sh ]; then
     echo 'Must run in the directory of this script!'
     exit
