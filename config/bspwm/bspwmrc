@@ -18,7 +18,6 @@ bspc monitor ^1 -d 1 2 3 4 5 6 7 8 9 0
 # If you want a more portable setup, use monitor numbers:
 #    bspc monitor ^1 -d 1 2 3 4 5
 #    bspc monitor ^2 -d 6 7 8 9 0
-# ^1 is the leftmost monitor. Desktop 1 will always be assigned to it.
 
 # If your monitors are flowing in the wrong direction:
 # First check monitor names by running:
