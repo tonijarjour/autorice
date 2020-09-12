@@ -16,23 +16,8 @@ set fillchars+=vert:\
 set number
 set relativenumber
 
-" Lightline indicates insert mode, so this is not needed
+" Lightline already indicates insert mode
 set noshowmode
-
-" View scrolls at 3 lines from the edges
-set scrolloff=3
-
-" Allows you to open another buffer without saving the current
-set hidden
-
-" Searching with lowercase characters will include uppercase results
-set ignorecase
-
-" Searching with uppercase characters will match explicitly
-set smartcase
-
-" View will not redraw during macros
-set lazyredraw
 
 " Tabs and Indents will be spaces
 set expandtab
@@ -43,64 +28,80 @@ set tabstop=4
 " Indent places 4 spaces
 set shiftwidth=4
 
-" When wrapping, do not break words
+" Allows you to open another buffer without saving the current
+set hidden
+
+" When wrapping long lines, do not break words
 set linebreak
+
+" View scrolls at 2 lines from the edges
+set scrolloff=2
+
+" Searching with lowercase characters will include uppercase results
+set ignorecase
+
+" Searching with uppercase characters will match explicitly
+set smartcase
+
+" View will not draw during macros (for better performance)
+set lazyredraw
 
 " Key for quick commands
 let mapleader = ","
 
-" Make a new window vertically, horizontally
-map <C-f> <C-W>v
-map <C-s> <C-W>s
-
-" Close current window
-map <C-q> <C-W>q
-
-" Move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-" Open/close tab
-nmap <silent> <C-n> :tabnew<cr>
-nmap <silent> <C-b> :tabclose<cr>
-
-" Move lines with alt + j/k
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
 " Quick save
 nmap <leader>w :w<cr>
 
-" Copy to clipboard
+" Copy visual selection to clipboard
 vmap <silent> <leader>c :w !xclip -se c<cr><cr>
 
-" Clear highlights
+" Clear search highlights
 nmap <silent> <leader>/ :noh<cr>
 
-" Open, close, and move between buffers.
-nmap <leader>e :e 
-nmap <silent> <leader>q :bdelete<cr>
-nmap <silent> <leader>l :bnext<cr>
-nmap <silent> <leader>j :bprevious<cr>
+" Force quit nvim
+nmap <silent> <leader>Q :qa!<cr>
 
-" fzf plugin commands
-nmap <leader>f :Files 
-nmap <leader>r :Rg 
-nmap <leader>s :Lines 
-nmap <leader>b :BLines 
-nmap <leader>t :Tags 
-nmap <leader>y :BTags 
-nmap <leader>h :History
+" Open nnn file manager (nnn)
+nmap <silent> <leader>n :NnnPicker<cr>
+
+" Open an empty buffer
+nmap <silent> <leader>e :enew<cr>
+
+" Quit the current buffer
+nmap <silent> <leader>q :bd<cr>
+
+" Search all open buffers and choose one to open (fzf)
 nmap <silent> <leader>g :Buffers<cr>
+
+" Search for files to open (fzf)
+nmap <leader>f :Files 
+
+" Pattern search file contents, and open the files you want (ripgrep, fzf)
+nmap <leader>r :Rg 
+
+" Search through lines of every open buffer and go to that line (fzf)
+nmap <leader>s :Lines 
+
+" Search through lines of the current buffer and go to that line (fzf)
+nmap <leader>l :BLines 
+
+" File history. Append : for command history, / for search history (fzf)
+nmap <leader>h :History
+
+" Search through marks and go to that line (fzf)
 nmap <silent> <leader>k :Marks<cr>
+
+" Search open windows by filename and go to a window (fzf) 
 nmap <silent> <leader>d :Windows<cr>
+
+" List key mappings and choose one to run (fzf)
 nmap <silent> <leader>m :Maps<cr>
+
+" Search every possible command and choose one to run (fzf)
 nmap <silent> <leader>v :Commands<cr>
-nmap <silent> <leader>p :HelpTags<cr>
+
+" Search through nvim documentation entries normally found in :help (fzf)
+nmap <silent> <leader>p :Helptags<cr>
 
 " vim-plug
 call plug#begin(stdpath('data') . '/plugged')
@@ -108,9 +109,3 @@ Plug 'junegunn/fzf.vim'
 Plug 'mcchrish/nnn.vim'
 Plug 'itchyny/lightline.vim'
 call plug#end()
-
-" Do not start newlines with a comment header
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" On focus, write the buffer with external changes (autoread is on)
-autocmd FocusGained,BufEnter * checktime
