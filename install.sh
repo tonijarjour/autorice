@@ -17,18 +17,20 @@ $PACMAN bat exa fd fzf ripgrep diff-so-fancy neovim neofetch man-db alacritty nn
 mkdir -p "$HOME"/.config/nnn/plugins "$HOME"/.local/share "$HOME"/.icons/default \
     "$HOME"/Images/Captures "$HOME"/Images/Wallpapers "$HOME"/Downloads "$HOME"/Projects
 
+# Link my windows hard drive
+ln -s /mnt/archive/Home "$HOME"/Archive
+
 # Put the dotfiles where they belong
 ln -sf "$LINKHERE"/home/.* "$HOME"
 ln -sf "$LINKHERE"/config/* "$HOME"/.config/
 
-# Default application settings
+# Default application settings (xdg-open pdfs and images)
 ln -s "$LINKHERE"/local/share/applications "$HOME"/.local/share
 
-# Default mouse cursor
+# Set the default mouse cursor
 cp other/index.theme "$HOME"/.icons/default
 
-# Personal stuff
-ln -s /mnt/archive/Home "$HOME"/Archive
+# Turn off mouse acceleration
 doas install -Dm 644 other/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
 
 # Install nnn plugins
