@@ -1,4 +1,4 @@
-![hi](1599808032.png)
+![hi](preview.png)
 This is a simple Arch Linux auto ricing script. It is mostly defaults save for neovim, which has been customized heavily. The script can't hold your hand, so you'll have to read the files to see what is going on, and to change it.
 
 ## Installation
@@ -24,7 +24,7 @@ git clone https://github.com/tonijarjour/autorice.git ~/.dotfiles
 ### Neovim
 1. Start `nvim` and run `:PlugInstall` to enable the plugins.
 2. Read `config/nvim/init.vim` to learn about the customizations and keybinds.
-![neovim](1599808230.png)
+![neovim](nvim.png)
 ### Aliases
 Aliases are in `home/.aliases`. Take a look and decide if you like what you see.
 
