@@ -13,7 +13,7 @@ $PACMAN alacritty alsa-utils bat bspwm capitaine-cursors cmus diff-so-fancy \
         dunst exa fd feh fzf httpie libnotify maim man-db mpv neofetch neovim \
         nnn noto-fonts noto-fonts-cjk noto-fonts-emoji picom ripgrep rofi sxhkd \
         sxiv xclip xorg-server xorg-xinit xorg-xprop xorg-xrandr xorg-xsetroot \
-        zathura-cb zathura-pdf-mupdf 
+        zathura-pdf-mupdf
     
 # Make the needed directories for this script to succeed.
 mkdir -p "$HOME"/.config/nnn/plugins "$HOME"/.local/share "$HOME"/.icons/default
