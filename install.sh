@@ -25,7 +25,7 @@ ln -sf "$LINKHERE"/config/* "$HOME"/.config/
 # Default application settings (xdg-open pdfs and images)
 ln -s "$LINKHERE"/local/share/applications "$HOME"/.local/share
 
-# Set the defeault mouse cursor
+# Set the default mouse cursor
 cp other/index.theme "$HOME"/.icons/default
 
 # Install nnn plugins
