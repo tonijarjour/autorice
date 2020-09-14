@@ -14,11 +14,10 @@ $PACMAN bat exa fd fzf ripgrep diff-so-fancy neovim neofetch man-db alacritty nn
      nvidia picom bspwm sxhkd alsa-utils zathura-pdf-poppler zathura-cb maim cmus \
      xorg-xsetroot capitaine-cursors
     
-mkdir -p "$HOME"/.config/nnn/plugins "$HOME"/.local/share "$HOME"/.icons/default \
-    "$HOME"/Images/Captures "$HOME"/Images/Wallpapers "$HOME"/Downloads "$HOME"/Projects
+mkdir -p "$HOME"/.config/nnn/plugins "$HOME"/.local/share "$HOME"/.icons/default
 
 # Link my windows hard drive
-ln -s /mnt/archive/Home "$HOME"/Archive
+ln -s /mnt/archive/Home/* "$HOME"
 
 # Put the dotfiles where they belong
 ln -sf "$LINKHERE"/home/.* "$HOME"
