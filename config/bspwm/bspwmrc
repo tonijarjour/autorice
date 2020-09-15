@@ -2,7 +2,7 @@
 
 # If these programs are already running, don't run them again.
 pgrep -x sxhkd > /dev/null || sxhkd &
-pgrep -x picom > /dev/null || picom &
+pgrep -x picom > /dev/null || picom --fade-delta=5 &
 	
 # Sets every desktop onto monitor one
 bspc monitor ^1 -d 1 2 3 4 5 6 7 8 9 0
