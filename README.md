@@ -1,5 +1,5 @@
 ![preview](preview.png)
-This is a simple Arch Linux auto ricing script. It is great for quickly setting up a working envornemnt on a new Arch installation, or as a canvas for further personal customization. Here is a list of programs:
+This is a simple Arch Linux auto ricing script. It is great for quickly setting up a working environment on a new Arch installation, or as a canvas for further personal customization. Here is a list of programs:
 
 - **Interactive Shell**: Bash
 - **Text Editor**: Neovim 
