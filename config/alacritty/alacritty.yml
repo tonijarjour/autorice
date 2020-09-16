@@ -10,17 +10,17 @@ scrolling:
 
 font:
   normal:
-    family: Source Code Variable 
-    style: Medium
+    family: Fantasque Sans Mono
+    style: Regular
   bold:
-    family: Source Code Variable 
+    family: Fantasque Sans Mono
     style: Bold
   italic:
-    family: Source Code Variable 
+    family: Fantasque Sans Mono
     style: Italic
   bold_italic:
-    family: Source Code Variable 
+    family: Fantasque Sans Mono
     style: Bold Italic
-  size: 10.0
+  size: 11.0
 
 #background_opacity: 0.85
