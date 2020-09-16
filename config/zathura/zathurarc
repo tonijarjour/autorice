@@ -1,7 +1,5 @@
 map u scroll half-up
 map d scroll half-down
-map p scroll full-up
-map n scroll full-down
 map K zoom in
 map J zoom out
 map D toggle_page_mode
