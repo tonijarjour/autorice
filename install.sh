@@ -12,7 +12,8 @@ $PACMAN bat exa fd fzf ripgrep diff-so-fancy neovim neofetch man-db alacritty nn
      xclip xorg-server xorg-xinit xorg-xprop xorg-xrandr dunst libnotify lilypond \
      noto-fonts noto-fonts-cjk noto-fonts-emoji chromium feh sxiv mpv rofi httpie \
      nvidia picom bspwm sxhkd alsa-utils zathura-pdf-poppler zathura-cb maim cmus \
-     xorg-xsetroot capitaine-cursors ttf-fantasque-sans-mono
+     xorg-xsetroot capitaine-cursors ttf-fantasque-sans-mono fluidsynth soundfont-fluid \
+     transmission-cli
     
 mkdir -p "$HOME"/.config/nnn/plugins "$HOME"/.local/share "$HOME"/.icons/default
 

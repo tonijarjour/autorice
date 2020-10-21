@@ -2,6 +2,7 @@
 # ~/.aliases
 
 alias vi='nvim'
+alias tsm='transmission-remote'
 alias jkl='cd "$HOME"/.dotfiles'
 alias lkj='cd "$HOME"/Projects'
 
@@ -31,3 +32,7 @@ alias gs='git status -s'
 alias gt='git remote'
 alias gv='git revert'
 alias gw='git show'
+
+midi() { 
+    command fluidsynth -a alsa -m alsa_seq -l -i /usr/share/soundfonts/FluidR3_GM.sf2 "$1" > /dev/null 2>&1 
+}

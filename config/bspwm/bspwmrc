@@ -8,8 +8,8 @@ pgrep -x picom > /dev/null || picom --config /dev/null --backend glx \
 bspc monitor ^1 -d 1 2 3 4 5
 bspc monitor ^2 -d 6 7 8 9 0
 
-bspc config window_gap            0
-bspc config border_width          1
+bspc config window_gap            8
+bspc config border_width          2
 bspc config split_ratio           0.5
 #bspc config focus_follows_pointer true
 
@@ -20,4 +20,4 @@ bspc rule -a feh state=pseudo_tiled
 bspc rule -a sxiv state=pseudo_tiled
 bspc rule -a mpv state=pseudo_tiled
 
-feh --bg-fill --no-fehbg --randomize ~/Images/Wallpapers
+feh --bg-fill --no-fehbg --randomize ~/Images/Wallpapers/7.png

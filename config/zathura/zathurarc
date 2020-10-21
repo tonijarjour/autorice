@@ -14,6 +14,7 @@ set render-loading false
 set recolor-keephue "true"
 set recolor-reverse-video "true"
 set selection-clipboard clipboard
+set show-recent 0
 
 set default-bg "#1d1f21"
 set default-fg "#F7F7F6" 
