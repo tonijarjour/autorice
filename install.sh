@@ -12,7 +12,7 @@ $PACMAN bat exa fd fzf ripgrep diff-so-fancy neovim neofetch man-db alacritty nn
      xclip xorg-server xorg-xinit xorg-xprop xorg-xrandr dunst libnotify lilypond \
      nvidia picom sxhkd alsa-utils zathura-pdf-poppler zathura-cb maim cmus dmenu \
      xorg-xsetroot capitaine-cursors ttf-fantasque-sans-mono transmission-cli gcc \
-     noto-fonts noto-fonts-cjk noto-fonts-emoji firefox feh sxiv mpv httpie \
+     noto-fonts noto-fonts-cjk noto-fonts-emoji firefox feh sxiv mpv httpie make \
      fluidsynth soundfont-fluid
      
     
