@@ -10,10 +10,11 @@ fi
 
 $PACMAN bat exa fd fzf ripgrep diff-so-fancy neovim neofetch man-db alacritty nnn \
      xclip xorg-server xorg-xinit xorg-xprop xorg-xrandr dunst libnotify lilypond \
-     noto-fonts noto-fonts-cjk noto-fonts-emoji chromium feh sxiv mpv rofi httpie \
-     nvidia picom bspwm sxhkd alsa-utils zathura-pdf-poppler zathura-cb maim cmus \
-     xorg-xsetroot capitaine-cursors ttf-fantasque-sans-mono fluidsynth soundfont-fluid \
-     transmission-cli
+     nvidia picom sxhkd alsa-utils zathura-pdf-poppler zathura-cb maim cmus dmenu \
+     xorg-xsetroot capitaine-cursors ttf-fantasque-sans-mono transmission-cli gcc \
+     noto-fonts noto-fonts-cjk noto-fonts-emoji firefox feh sxiv mpv httpie \
+     fluidsynth soundfont-fluid
+     
     
 mkdir -p "$HOME"/.config/nnn/plugins "$HOME"/.local/share "$HOME"/.icons/default
 
