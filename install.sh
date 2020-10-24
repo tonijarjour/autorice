@@ -34,6 +34,12 @@ cp other/index.theme "$HOME"/.icons/default
 # Turn off mouse acceleration
 doas install -Dm 644 other/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
 
+# Install dwm
+git clone https://git.suckless.org/dwm "$HOME"/.mydwm
+ln -s "$LINKHERE"/other/config.h "$HOME"/.mydwm
+cd "$HOME"/.mydwm
+doas make clean install
+
 # Install nnn plugins
 curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
 
