@@ -29,7 +29,7 @@ ln -sf "$LINKHERE"/config/* "$HOME"/.config/
 ln -s "$LINKHERE"/local/share/applications "$HOME"/.local/share
 
 # Set the default mouse cursor
-cp other/index.theme "$HOME"/.icons/default
+ln -s other/index.theme "$HOME"/.icons/default
 
 # Turn off mouse acceleration
 doas install -Dm 644 other/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
