@@ -26,7 +26,7 @@ ln -sf "$LINKHERE"/config/* "$HOME"/.config/
 ln -s "$LINKHERE"/local/share/applications "$HOME"/.local/share
 
 # Set the default mouse cursor
-cp other/index.theme "$HOME"/.icons/default
+ln -s other/index.theme "$HOME"/.icons/default
 
 # Install nnn plugins
 curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
