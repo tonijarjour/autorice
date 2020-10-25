@@ -10,9 +10,9 @@ fi
 
 $PACMAN bat exa fd fzf ripgrep diff-so-fancy neovim neofetch man-db alacritty nnn \
      xclip xorg-server xorg-xinit xorg-xprop xorg-xrandr dunst libnotify lilypond \
-     nvidia picom sxhkd alsa-utils zathura-pdf-poppler zathura-cb maim cmus dmenu \
+     nvidia make sxhkd alsa-utils zathura-pdf-poppler zathura-cb maim cmus dmenu \
      xorg-xsetroot capitaine-cursors ttf-fantasque-sans-mono transmission-cli gcc \
-     noto-fonts noto-fonts-cjk noto-fonts-emoji firefox feh sxiv mpv httpie make \
+     noto-fonts noto-fonts-cjk noto-fonts-emoji firefox feh sxiv mpv httpie \
      fluidsynth soundfont-fluid
      
     
@@ -29,7 +29,7 @@ ln -sf "$LINKHERE"/config/* "$HOME"/.config/
 ln -s "$LINKHERE"/local/share/applications "$HOME"/.local/share
 
 # Set the default mouse cursor
-ln -s other/index.theme "$HOME"/.icons/default
+ln -s "$LINKHERE"/other/index.theme "$HOME"/.icons/default
 
 # Turn off mouse acceleration
 doas install -Dm 644 other/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
