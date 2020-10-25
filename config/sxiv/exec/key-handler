@@ -3,12 +3,6 @@
 while read -r file
 do
     case "$1" in
-        "C-r")
-                name="$(rofi -l 0 -location 7 -xoffset 25 -yoffset -25 -m -1 -dmenu -p "rename $file to: ")" 2> /dev/null
-                if  [ -n "$name" ]; then
-                    mv "$file" "$name"
-                fi
-                ;;
         "C-c")
                 xclip -se c -t image/png "$file" ;;
         "C-w")

@@ -189,7 +189,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/rofi -location 7 -xoffset 25 -yoffset -25 -m -1 -dmenu -p dunst
+    dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/chromium
