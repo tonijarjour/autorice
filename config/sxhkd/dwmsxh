@@ -14,7 +14,7 @@ super + n
 super + z
     alacritty -e cmus
 super + r
-    firefox 
+    chromium
 super + v
     zathura
 
