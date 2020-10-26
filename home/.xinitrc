@@ -32,7 +32,7 @@ fi
 setxkbmap -layout us -variant altgr-intl -option nodeadkeys
 setxkbmap -option caps:super
 xsetroot -cursor_name left_ptr
-feh --bg-fill --no-fehbg --randomize "$HOME"/Images/Wallpapers/7.png
+feh --bg-fill --no-fehbg --randomize "$HOME"/Images/Wallpapers/3.png
 sh "$HOME"/.dotfiles/date.sh &
 pgrep -x sxhkd > /dev/null || sxhkd -c "$HOME"/.config/sxhkd/dwmsxh &
 exec dwm
