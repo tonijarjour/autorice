@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Dota 2
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/570
+Icon=steam_icon_570
+Terminal=false
+Type=Application
+Categories=Game;

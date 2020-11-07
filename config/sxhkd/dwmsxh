@@ -15,6 +15,8 @@ super + z
     alacritty -e cmus
 super + r
     chromium
+super + R
+    chromium --incognito
 super + v
     zathura
 
