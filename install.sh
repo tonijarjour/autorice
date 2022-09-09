@@ -4,14 +4,14 @@ set -euo pipefail
 here="$PWD"
 [[ ! -f "$here/install.sh" ]] && exit 1
 
-doas pacman -S base-devel man-db ripgrep fd neovim alacritty mpv maim xclip \
+sudo pacman -S base-devel man-db ripgrep fd neovim alacritty mpv maim xclip \
     ttf-iosevka-nerd ttf-liberation noto-fonts noto-fonts-cjk noto-fonts-emoji \
     xorg-server xorg-xinit xorg-xsetroot dmenu zathura-pdf-mupdf zathura-cb feh
 
 git clone "https://github.com/tonijarjour/dwm.git" "$HOME/dwm"
 ln -s "$here/config.h" "$HOME/dwm"
 cd "$HOME/dwm" || exit 1
-doas make clean install
+sudo make clean install
 
 git clone "https://aur.archlinux.org/nvim-packer-git.git" "$HOME/packer"
 cd "$HOME/packer" || exit 1
