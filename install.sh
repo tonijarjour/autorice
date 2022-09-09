@@ -1,36 +1,27 @@
-#!/bin/sh
+#!/bin/bash
+set -euo pipefail
 
-PACMAN='sudo pacman -S'
-LINKHERE="$PWD"
+here="$PWD"
+[[ ! -f "$here/install.sh" ]] && exit 1
 
-# This needs to be run from the directory that contains it to properly link the files.
-if ! [ -f "$PWD"/install.sh ]; then
-    echo 'Must run in the directory of this script!'
-    exit
-fi
+doas pacman -S base-devel man-db ripgrep fd neovim alacritty mpv maim xclip \
+    ttf-iosevka-nerd ttf-liberation noto-fonts noto-fonts-cjk noto-fonts-emoji \
+    xorg-server xorg-xinit xorg-xsetroot dmenu zathura-pdf-mupdf zathura-cb feh
 
-$PACMAN alacritty alsa-utils bat bspwm capitaine-cursors cmus diff-so-fancy \
-        dunst exa fd feh fzf httpie libnotify maim man-db mpv neofetch neovim \
-        nnn noto-fonts noto-fonts-cjk noto-fonts-emoji picom ripgrep rofi sxhkd \
-        sxiv xclip xorg-server xorg-xinit xorg-xprop xorg-xrandr xorg-xsetroot \
-        zathura-pdf-mupdf
-    
-# Make the needed directories for this script to succeed.
-mkdir -p "$HOME"/.config/nnn/plugins "$HOME"/.local/share "$HOME"/.icons/default
+git clone "https://aur.archlinux.org/nvim-packer-git.git" "$HOME/packer"
+cd "$HOME/packer" || exit 1
+makepkg -si
 
-# Put the dotfiles where they belong
-ln -sf "$LINKHERE"/home/.* "$HOME"
-ln -sf "$LINKHERE"/config/* "$HOME"/.config/
+git clone "https://aur.archlinux.org/nsxiv.git" "$HOME/nsxiv"
+cd "$HOME/nsxiv" || exit 1
+makepkg -si
 
-# Default application settings (xdg-open pdfs and images)
-ln -s "$LINKHERE"/local/share/applications "$HOME"/.local/share
+mkdir -p "$HOME/.config"
+ln -sf "$here/config/"* "$HOME/.config/"
 
-# Set the default mouse cursor
-ln -s "$LINKHERE"/other/index.theme "$HOME"/.icons/default
+for f in "$here/home/"*
+do
+    ln -sf "$f" "$HOME/.${f##*/}"
+done
 
-# Install nnn plugins
-curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
-
-# Install vim-plug
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+echo "DONE"

@@ -1,2 +1,4 @@
 .netrwhist
-bookmarks
+config/nvim/plugin
+config/mpv/scripts
+config/mpv/script-modules

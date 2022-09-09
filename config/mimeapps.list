@@ -1,6 +1,6 @@
 [Default Applications]
-
-image/png=img.desktop
-image/jpeg=img.desktop
-image/gif=img.desktop
-application/pdf=pdf.desktop
+image/png=nsxiv.desktop
+image/jpeg=nsxiv.desktop
+image/gif=nsxiv.desktop
+video/mp4=mpv.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop

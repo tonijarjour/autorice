@@ -1,0 +1,24 @@
+#!/bin/bash
+# ~/.xinitrc
+
+[ -f "$HOME/.Xresources" ] && xrdb -merge "$HOME/.Xresources"
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
+setxkbmap -option caps:super
+feh --bg-fill --no-fehbg --randomize "$HOME/Images/Wallpapers/"
+
+dt() { echo -e "$(date +"%b %d")"; }
+tm() { echo -e "^c#11111b^^b#f5e0dc^  $(date +"%a, %I:%M %p")  ^d^"; }
+
+while true; do
+    xsetroot -name "$(dt)  $(tm)"
+    sleep 12
+done &
+
+exec dwm

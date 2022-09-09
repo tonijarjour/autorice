@@ -1,9 +1,0 @@
-! Larger cursor (otherwise it is very small)
-Xcursor.size: 32
-
-! More readable font for sxiv
-*font: xft:Noto Sans:size=10
-
-! Better colors for sxiv
-*foreground: #1d1f21
-*background: #B0B0B0

@@ -1,5 +1,0 @@
-feh 	--scale-down \
-	--borderless \
-	--no-menus \
-	--image-bg #B0B0B0 \
-    --geometry 960x540
