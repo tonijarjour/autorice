@@ -9,7 +9,7 @@ sudo pacman -S base-devel man-db ripgrep fd neovim alacritty mpv maim xclip \
     xorg-server xorg-xinit xorg-xsetroot dmenu zathura-pdf-mupdf zathura-cb feh
 
 git clone "https://github.com/tonijarjour/dwm.git" "$HOME/dwm"
-ln -s "$here/config.h" "$HOME/dwm"
+ln -s "$here/dwm.h" "$HOME/dwm/config.h"
 cd "$HOME/dwm" || exit 1
 sudo make clean install
 
