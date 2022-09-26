@@ -18,6 +18,7 @@ alias bat='nvim -R'
 alias ls='ls --color=auto'
 alias lsa='ls -a'
 alias imv='nsxiv -a'
+alias hc='bash $HOME/.bash_logout; history -c; history -r'
 
 g() {
     case "$1" in 
