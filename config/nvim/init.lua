@@ -13,3 +13,4 @@ require('bufferline').setup {
 require('nvim-treesitter.configs').setup {
     ensure_installed = {'bash'},
     highlight = {enable = true}}
+-- Telescope does not need setup
