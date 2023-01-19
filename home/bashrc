@@ -18,7 +18,7 @@ alias bat='nvim -R'
 alias ls='ls --color=auto'
 alias lsa='ls -A'
 alias imv='nsxiv -a'
-alias hc='bash $HOME/.bash_logout; history -c; history -r'
+alias hc='source $HOME/.bash_logout; history -c; history -r'
 
 g() {
     case "$1" in 
@@ -45,3 +45,5 @@ g() {
         *) git "$@"
     esac
 }
+
+source "$HOME/.bash_logout"
