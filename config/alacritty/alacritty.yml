@@ -1,7 +1,7 @@
 window:
   dimensions:
     columns: 86
-    lines: 27
+    lines: 28
   padding:
     x: 4
     y: 4
@@ -10,16 +10,16 @@ scrolling:
 
 font:
   normal:
-    family: Iosevka
+    family: Iosevka Nerd Font
     style: Regular
   bold:
-    family: Iosevka
+    family: Iosevka Nerd Font
     style: Bold
   italic:
-    family: Iosevka
+    family: Iosevka Nerd Font
     style: Italic
   bold_italic:
-    family: Iosevka
+    family: Iosevka Nerd Font
     style: Bold Italic
   size: 15
 
