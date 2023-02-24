@@ -12,7 +12,7 @@ customization. Here is a list of programs:
 - **Text Editor**: Neovim 
 - **PDF Reader**: Zathura
 - **Media Player**: mpv
-- **Image Viewer**: nsxiv
+- **Image Viewer**: sxiv
 - **Wallpaper Setter**: feh
 - **Screenshot Tool**: maim
 - **Clipboard Manager**: xclip

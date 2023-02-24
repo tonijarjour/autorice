@@ -6,7 +6,8 @@ here="$PWD"
 
 sudo pacman -S base-devel man-db ripgrep fd neovim alacritty mpv maim xclip \
     ttf-iosevka-nerd ttf-liberation noto-fonts noto-fonts-cjk noto-fonts-emoji \
-    xorg-server xorg-xinit xorg-xsetroot dmenu zathura-pdf-mupdf zathura-cb feh
+    xorg-server xorg-xinit xorg-xsetroot dmenu zathura-pdf-mupdf zathura-cb \
+    feh sxiv
 
 git clone "https://github.com/tonijarjour/dwm.git" "$HOME/dwm"
 ln -s "$here/dwm.h" "$HOME/dwm/config.h"
@@ -15,10 +16,6 @@ sudo make clean install
 
 git clone "https://aur.archlinux.org/nvim-packer-git.git" "$HOME/packer"
 cd "$HOME/packer" || exit 1
-makepkg -si
-
-git clone "https://aur.archlinux.org/nsxiv.git" "$HOME/nsxiv"
-cd "$HOME/nsxiv" || exit 1
 makepkg -si
 
 mkdir -p "$HOME/.config"
