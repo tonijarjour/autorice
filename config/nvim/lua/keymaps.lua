@@ -10,7 +10,7 @@ keymap('n', '<Leader>p', '<cmd>BufferLineCyclePrev<cr>', {})
 -- New buffer, open file
 keymap('n', '<Leader>en', '<cmd>enew<cr>', {})
 keymap('n', '<Leader>e.', ':e ', {})
-keymap('n', '<Leader>el', ':e ~/', {})
+keymap('n', '<Leader>e,', ':e ~/', {})
 -- Save buffer
 keymap('n', '<Leader>ew', '<cmd>w<cr>', {})
 -- Close buffer, forcefully
