@@ -26,4 +26,7 @@ do
     ln -sf "$f" "$HOME/.${f##*/}"
 done
 
+doas install -Dm 644 "$here/arabic.conf" \
+  "/etc/fonts/conf.d/66-noto-reject-nastaliq.conf"
+
 echo "DONE"
