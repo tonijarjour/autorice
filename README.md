@@ -18,7 +18,7 @@ customization. Here is a list of programs:
 - **Clipboard Manager**: xclip
 - **Monospace**: Iosevka 
 - **Unicode**: Noto Fonts
-- **MS Metric**: Liberation
+- **MS Metric**: Croscore
 
 Read `install.sh` for a full list
 
