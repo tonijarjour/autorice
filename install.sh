@@ -18,7 +18,7 @@ s pacman -S fd ripgrep neovim alacritty mpv maim feh sxiv xclip dmenu which \
   xorg-server xorg-xinit xorg-xsetroot zathura-pdf-mupdf zathura-cb fakeroot \
   gcc autoconf automake pkgconf make patch man-db texinfo arc-solid-gtk-theme
 
-echo 'install a fontconfig that ensures a display friendly arabic font is used'
+echo 'install a fontconfig file that ensures the use of a display friendly arabic font'
 s install -Dm 644 "$here/system/arabic.conf" "/etc/fonts/conf.d/66-noto-reject-nastaliq.conf"
 
 git clone "https://github.com/tonijarjour/dwm.git" "$HOME/dwm"

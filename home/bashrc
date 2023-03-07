@@ -20,6 +20,15 @@ alias lsa='ls -A'
 alias imv='sxiv -a'
 alias hc='source $HOME/.bash_logout; history -c; history -r'
 
+s() {
+  C=''
+  for i in "$@"; do 
+    i="${i//\\/\\\\}"
+    C="$C \"${i//\"/\\\"}\""
+  done
+  su -c bash -c "$C"
+}
+
 g() {
     case "$1" in 
         a) git add "${@:2}" ;;
