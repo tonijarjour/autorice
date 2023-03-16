@@ -36,6 +36,7 @@ g() {
     c) git commit "${@:2}" ;;
     d) case "$2" in 
       s) git diff --staged "${@:3}" ;; 
+      n) git diff --no-index "${@:3}" ;; 
       *) git diff "${@:2}"
     esac ;;
     h) git stash "${@:2}" ;;
