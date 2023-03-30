@@ -3,4 +3,3 @@
 
 export VISUAL="/usr/bin/nvim"
 export EDITOR="/usr/bin/nvim"
-export GTK_THEME="Arc-Dark-solid"

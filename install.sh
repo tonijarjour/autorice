@@ -7,11 +7,10 @@ here="$PWD"
 prompt() { printf "=> "; su -c bash -c "$@"; }
 
 echo "Install programs with pacman"
-prompt \
- "pacman -S fd ripgrep neovim alacritty mpv maim feh sxiv xclip dmenu which \
+prompt "pacman -S fd ripgrep neovim alacritty mpv maim feh sxiv xclip dmenu \
   ttf-iosevka-nerd ttf-croscore noto-fonts noto-fonts-cjk noto-fonts-emoji \
-  xorg-server xorg-xinit xorg-xsetroot zathura-pdf-mupdf zathura-cb patch gcc \
-  arc-solid-gtk-theme man-db texinfo fakeroot autoconf automake pkgconf make"
+  xorg-server xorg-xinit xorg-xsetroot zathura-pdf-mupdf zathura-cb which \
+  patch gcc man-db texinfo fakeroot autoconf automake pkgconf make"
 
 git clone "https://github.com/tonijarjour/dwm.git" "$HOME/dwm"
 ln -s "$here/system/dwm.h" "$HOME/dwm/config.h"
