@@ -4,39 +4,33 @@ set -euo pipefail
 here="$PWD"
 [[ ! -f "$here/install.sh" ]] && exit 1
 
-s() {
-  C=''
-  for i in "$@"; do 
-    i="${i//\\/\\\\}"
-    C="$C \"${i//\"/\\\"}\""
-  done
-  su -c bash -c "$C"
-}
+prompt() { printf "=> "; su -c bash -c "$@"; }
 
-s pacman -S fd ripgrep neovim alacritty mpv maim feh sxiv xclip dmenu which \
+echo "Install programs with pacman"
+prompt \
+ "pacman -S fd ripgrep neovim alacritty mpv maim feh sxiv xclip dmenu which \
   ttf-iosevka-nerd ttf-croscore noto-fonts noto-fonts-cjk noto-fonts-emoji \
-  xorg-server xorg-xinit xorg-xsetroot zathura-pdf-mupdf zathura-cb fakeroot \
-  gcc autoconf automake pkgconf make patch man-db texinfo arc-solid-gtk-theme
-
-echo 'install a fontconfig file that ensures the use of a display friendly arabic font'
-s install -Dm 644 "$here/system/arabic.conf" "/etc/fonts/conf.d/66-noto-reject-nastaliq.conf"
+  xorg-server xorg-xinit xorg-xsetroot zathura-pdf-mupdf zathura-cb patch gcc \
+  arc-solid-gtk-theme man-db texinfo fakeroot autoconf automake pkgconf make"
 
 git clone "https://github.com/tonijarjour/dwm.git" "$HOME/dwm"
 ln -s "$here/system/dwm.h" "$HOME/dwm/config.h"
 cd "$HOME/dwm" || exit 1
-echo 'compile and install dwm'
-s make clean install
+echo "Compile and install dwm"
+prompt "make clean install"
 
-git clone "https://aur.archlinux.org/nvim-packer-git.git" "$HOME/packer"
-cd "$HOME/packer" || exit 1
-makepkg -si
+echo "Disable mouse acceleration"
+prompt "install -Dm 644 \"$here/system/50-mouse-acceleration.conf\" \"/etc/X11/xorg.conf.d/\""
+
+echo "Reject Noto Nastaliq Urdu font"
+prompt "install -Dm 644 \"$here/system/arabic.conf\" \"/etc/fonts/conf.d/66-noto-reject-nastaliq.conf\""
 
 mkdir -p "$HOME/.config"
 ln -sf "$here/config/"* "$HOME/.config/"
 
 for f in "$here/home/"*
 do
-    ln -sf "$f" "$HOME/.${f##*/}"
+  ln -sf "$f" "$HOME/.${f##*/}"
 done
 
 echo "DONE"
