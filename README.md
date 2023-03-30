@@ -1,9 +1,9 @@
-![preview](preview.png)
+![Preview](preview.png)
 
 # Autorice
-This is a simple Arch Linux bootstrapping script. It is great for quickly 
-setting up a working environment, or as a canvas for further personal 
-customization. Here is a list of programs:
+This is a simple Arch Linux bootstrapping script. It is great for
+quickly setting up a working environment, or as a canvas for further
+personal customization. Here is a list of programs:
 
 - **Terminal Emulator**: Alacritty
 - **Interactive Shell**: Bash
@@ -20,16 +20,17 @@ customization. Here is a list of programs:
 - **Unicode**: Noto Fonts
 - **MS Metric**: Croscore
 
-Read `install.sh` for a full list
-
 ## Installation
-- Read `install.sh`
+1. Clone this repository.
 ```shell
-git clone https://github.com/tonijarjour/autorice.git .dont_delete
+git clone --depth 1 https://github.com/tonijarjour/autorice.git .dont_delete
+```
+2. Read `install.sh`. Remove anything you do not want.
+3. Run the script from within its directory.
+```shell
 cd .dont_delete
 bash install.sh
 ```
-- Start `nvim` and run `:PackerSync`
 
 ### Feedback and bug reporting
 Please open an issue if you find something wrong or have suggestions for how 
