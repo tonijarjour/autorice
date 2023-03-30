@@ -19,9 +19,6 @@ cd "$HOME/dwm" || exit 1
 echo "Compile and install dwm"
 prompt "make clean install"
 
-echo "Disable mouse acceleration"
-prompt "install -Dm 644 \"$here/system/50-mouse-acceleration.conf\" \"/etc/X11/xorg.conf.d/\""
-
 echo "Reject Noto Nastaliq Urdu font"
 prompt "install -Dm 644 \"$here/system/arabic.conf\" \"/etc/fonts/conf.d/66-noto-reject-nastaliq.conf\""
 
