@@ -1,20 +1,26 @@
-local opt = vim.opt
-opt.tabstop = 2 -- <tab>
-opt.shiftwidth = 2 -- indent
-opt.expandtab = true -- only spaces
-opt.number = true -- Line numbers
-opt.relativenumber = true -- Line delta
-opt.wrap = false -- line wrap off
-opt.hidden = true -- Move between buffers without save
-opt.showmode = false -- Superfluous (and looks bad) so turn off
-opt.ignorecase = true -- lowercase search match all case
-opt.smartcase = true -- uppercase search only match uppercase
-opt.lazyredraw = true -- dont redraw during macros (better performance)
-opt.hlsearch = false -- don't highlight search results
-opt.title = true -- nvim sets the window title
-opt.mouse = "a" -- full mouse support
-opt.cursorline = true -- highlight current line
-opt.wildignorecase = true -- path completion ignores case
-opt.wildmode = "longest:full" -- path completion no auto select
-opt.completeopt = "menuone,noselect" -- buffer completion no auto select
-opt.pumheight = 10 -- completion menu 10 options shown
+local options = {
+  tabstop = 2,
+  shiftwidth = 2,
+  expandtab = true,
+  number = true,
+  wrap = false,
+  linebreak = true,
+  hidden = true,
+  showmode = false,
+  ignorecase = true,
+  smartcase = true,
+  lazyredraw = true,
+  title = true,
+  mouse = "a",
+  cursorline = true,
+  wildignorecase = true,
+  wildmode = "longest:full",
+  pumheight = 12,
+  signcolumn = "no",
+  splitright = true,
+  splitbelow = true
+}
+
+for k, v in pairs(options) do
+  vim.opt[k] = v
+end
