@@ -204,7 +204,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY,                       XK_Print,      spawn,                  SHCMD("maim -su -m 10 | xclip -se c -t image/png") },
 	{ MODKEY|ShiftMask,             XK_Print,      spawn,                  SHCMD("maim -su -m 10 $HOME/Images/Captures/$(date +%s).png") },
-	{ MODKEY|ControlMask,           XK_w,          spawn,                  SHCMD("sxiv -t $HOME/Images/Wallpapers") },
+	{ MODKEY|ControlMask,           XK_w,          spawn,                  SHCMD("nsxiv -t $HOME/Images/Wallpapers") },
 	{ MODKEY,                       XK_b,          togglebar,              {0} },
 	{ MODKEY,                       XK_j,          focusstack,             {.i = +1 } },
 	{ MODKEY,                       XK_k,          focusstack,             {.i = -1 } },

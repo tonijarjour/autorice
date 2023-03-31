@@ -7,16 +7,20 @@ here="$PWD"
 prompt() { printf "=> "; su -c bash -c "$@"; }
 
 echo "Install programs with pacman"
-prompt "pacman -S fd ripgrep neovim alacritty mpv maim feh sxiv xclip dmenu \
+prompt "pacman -S fd ripgrep neovim alacritty mpv maim feh xclip dmenu which \
   ttf-iosevka-nerd ttf-croscore noto-fonts noto-fonts-cjk noto-fonts-emoji \
-  xorg-server xorg-xinit xorg-xsetroot zathura-pdf-mupdf zathura-cb which \
-  patch gcc man-db texinfo fakeroot autoconf automake pkgconf make"
+  xorg-server xorg-xinit xorg-xsetroot zathura-pdf-mupdf zathura-cb texinfo \
+  patch gcc man-db fakeroot autoconf automake pkgconf make"
 
 git clone "https://github.com/tonijarjour/dwm.git" "$HOME/dwm"
 ln -s "$here/system/dwm.h" "$HOME/dwm/config.h"
 cd "$HOME/dwm" || exit 1
 echo "Compile and install dwm"
 prompt "make clean install"
+
+git clone "https://aur.archlinux.org/nsxiv.git" "$HOME/nsxiv"
+cd "$HOME/nsxiv" || exit 1
+makepkg -si
 
 echo "Reject Noto Nastaliq Urdu font"
 prompt "install -Dm 644 \"$here/system/arabic.conf\" \"/etc/fonts/conf.d/66-noto-reject-nastaliq.conf\""
